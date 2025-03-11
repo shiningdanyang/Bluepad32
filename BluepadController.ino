@@ -172,6 +172,18 @@ void encodeGamepad(ControllerPtr ctl) {
   // Serial2.write(">");
   // Serial2.write(">");
   
+  Serial.write("<");
+  Serial.write("<");
+  Serial.write("<");
+  Serial.write("<");
+  for (int i = 0; i < 9; i++) {
+    Serial.write(byte[i]);
+  }
+  Serial.write(">");
+  Serial.write(">");
+  Serial.write(">");
+  Serial.write(">");
+
   Serial2.write("<");
   Serial2.write("<");
   Serial2.write("<");
@@ -186,7 +198,7 @@ void encodeGamepad(ControllerPtr ctl) {
 }
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(19200);
   Serial2.begin(19200);
   pinMode(0, INPUT_PULLUP);
   pinMode(2, OUTPUT);
