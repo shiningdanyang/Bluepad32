@@ -198,8 +198,8 @@ void encodeGamepad(ControllerPtr ctl) {
 }
 
 void setup() {
-  Serial.begin(19200);
-  Serial2.begin(19200);
+  Serial.begin(115200);
+  Serial2.begin(115200);
   pinMode(0, INPUT_PULLUP);
   pinMode(2, OUTPUT);
   delay(1000);
